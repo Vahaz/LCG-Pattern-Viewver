@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>LCG Pattern Viewver</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="icon.webp">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Twitter / X embed -->
+        <meta name="twitter:image:src" content="icon.webp">
+        <meta name="twitter:site" content="LCG Pattern Viewver">
+        <meta name="twitter:card" content="/assets/PROJECTS/default.png">
+        <meta name="twitter:title" content="Display LCG pattern from user values">
+        <meta name="twitter:description"content="Made by &#34;Vahaz&#34; in one day, after watching &#34;Zanzlanz&#34;'s video.">
+
+        <!-- Others (like Discord) embed -->
+        <meta property="og:image" content="icon.webp">
+        <meta property="og:image:alt" content="Icon image">
+        <meta property="og:image:width" content="128">
+        <meta property="og:image:height" content="128">
+        <meta property="og:site_name" content="LCG Pattern Viewver">
+        <meta property="og:type" content="object">
+        <meta property="og:title" content="Display LCG pattern from user values">
+        <meta property="og:description" content="Made by &#34;Vahaz&#34; in one day, after watching &#34;Zanzlanz&#34;'s video.">
+    </head>
+    <body>
+        <header>
+            <h2>LCG Pattern Viewver</h2>
+            <p>LCG : Linear congruential generator</p>
+            <p>Formula : seed = (seed * mult + increment) % mod</p>
+        </header>
+        <main>
+            <canvas id="canvas" width="300" height="300"></canvas>
+            <div id="content">
+                <ul id="display">
+                    <li class="input">
+                        <label for="mult">Mult</label>
+                        <input id="mult" type="number" min="0" step="1" value="9301">
+                    </li>
+                    <li class="input">
+                        <label for="increment">Increment</label>
+                        <input id="increment" type="number" min="0" step="1" value="233280">
+                    </li>
+                    <li class="input">
+                        <label for="mod">Mod</label>
+                        <input id="mod" type="number" min="0" step="1" value="49297">
+                    </li>
+                    <li>
+                        <button class="button-style" onclick="gen()">
+                            <span class="button-style-front">Generate LCG</span>
+                        </button>
+                    </li>
+                    <li>
+                        <a class="a-style" href="" download="canvas_image.png" onclick="downloadCanvas(this)">
+                            <span class="a-style-front">Download Image</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="sources">
+                    <li>
+                        <h2>Sources</h2>
+                    </li>
+                    <li>
+                        <a class="a-style" href="https://en.wikipedia.org/w/index.php?title=Linear_congruential_generator" target="_blank" hreflang="en">
+                            <span class="a-style-front">Wikipédia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="a-style" href="https://youtu.be/XDsYPXRCXAs" target="_blank" hreflang="en">
+                            <span class="a-style-front">Zanzlanz's Video (Youtube)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>Made by <a href="https://github.com/Vahaz" target="_blank" hreflang="en">Vahaz</a> in one day, after watching <a href="https://www.youtube.com/user/Zanzlanz" target="_blank" hreflang="en">Zanzlanz</a>'s video. <br> The goal was to recreate the pattern generation.</footer>
+        <script src="lcg.js"></script>
+    </body>
+</html>

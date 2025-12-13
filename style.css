@@ -1,0 +1,206 @@
+:root {
+    background-color: rgb(24, 24, 25);
+}
+
+* {
+    border-radius: 10px;
+    font-family: monospace;
+    text-align: center;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header > h2 {
+    text-decoration: underline;
+}
+
+header > p {
+    margin: 5px;
+    color: rgb(212, 212, 212);
+}
+
+footer {
+    margin: 30px 0px;
+    color: rgb(212, 212, 212);
+}
+
+main {
+    display: flex;
+}
+
+#canvas {
+    width: 500px;
+    height: 500px;
+    image-rendering: pixelated;
+}
+
+#content {
+    margin-left: 25px;
+}
+
+#display {
+    list-style: none;
+    background-color: rgb(32, 32, 33);
+    margin: 0;
+    padding: 10px;
+}
+
+#display li {
+    margin-top: 25px;
+}
+
+#sources {
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(32, 32, 33);
+}
+
+#sources h2 {
+    margin: 0;
+    text-align: center;
+}
+
+#sources li {
+    margin-top: 20px;
+}
+
+.button-style {
+    background: none;
+    border: transparent;
+    cursor: pointer;
+    background-color: rgb(24, 24, 25);
+    padding: 0;
+    width: 80%;
+}
+
+.button-style-front {
+    display: block;
+    padding: 5px 10px;
+    font-size: 15px;
+    background: rgb(28, 28, 29);
+    transform: translateY(-6px);
+}
+
+.button-style:active .button-style-front {
+    transform: translateY(-2px);
+}
+
+.input {
+    position: relative;
+}
+
+.input > input {
+    font-size: 15px;
+    padding: 5px 10px;
+    text-align: left;
+    color: rgb(212, 212, 212);
+    border: 1px solid rgb(24, 24, 25);
+    background-color: rgb(36, 36, 37);
+    border-top-left-radius: 0 !important;
+}
+
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    transform: rotate(90deg);
+    height: 25px;
+    margin-right: 10px;
+}
+
+.input > label {
+    position: absolute;
+    top: -16px;
+    background-color: rgb(36, 36, 37);
+    padding: 0px 10px;
+    border-radius: 0 !important;
+    border: 1px solid rgb(24, 24, 25);
+}
+
+.a-style {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgb(24, 24, 25);
+}
+
+.a-style-front {
+    display: block;
+    padding: 5px 10px;
+    font-size: 15px;
+    background: rgb(28, 28, 29);
+    transform: translateY(-6px);
+}
+
+.a-style:active .a-style-front {
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+
+    #sources {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #canvas {
+        width: 300px;
+        height: 300px;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: fit-content;
+        margin-top: 20px;
+    }
+
+    #display {
+        width: 100%;
+    }
+
+    #sources {
+        width: 100%;
+    }
+
+}
