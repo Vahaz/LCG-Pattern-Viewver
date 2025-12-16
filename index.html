@@ -52,9 +52,14 @@
                         </button>
                     </li>
                     <li>
-                        <a class="a-style" href="" download="canvas_image.png" onclick="downloadCanvas(this)">
-                            <span class="a-style-front">Download Image</span>
+                        <a class="a-style download" href="" download="canvas_image.png" onclick="downloadCanvas(this)">
+                            <span class="a-style-front download-front">Download Image</span>
                         </a>
+                    </li>
+                    <li>
+                        <button class="button-style reset" onclick="reset()">
+                            <span class="button-style-front reset-front">Reset Settings</span>
+                        </button>
                     </li>
                 </ul>
                 <ul id="sources">
@@ -74,7 +79,9 @@
                 </ul>
             </div>
         </main>
-        <footer>Made by <a href="https://github.com/Vahaz" target="_blank" hreflang="en">Vahaz</a> in one day, after watching <a href="https://www.youtube.com/user/Zanzlanz" target="_blank" hreflang="en">Zanzlanz</a>'s video. <br> The goal was to recreate the pattern generation.</footer>
+        <footer>
+            <p>Made by <a href="https://github.com/Vahaz" target="_blank" hreflang="en">Vahaz</a> after watching <a href="https://www.youtube.com/user/Zanzlanz" target="_blank" hreflang="en">Zanzlanz</a>'s video. <br> The goal was to recreate the pattern generation.</p>
+        </footer>
         <script src="lcg.js"></script>
     </body>
 </html>

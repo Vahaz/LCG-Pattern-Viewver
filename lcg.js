@@ -10,7 +10,7 @@ let height = canvas.height;
 let imageData = new ImageData(width, height);
 const data = imageData.data;
 
-let s = 1;                   // Seed
+let s = 1;                   // Seed (Default: 1)
 
 function lcg(a, c, m) {
     s = (s * a + c) % m;
@@ -49,4 +49,10 @@ function update(a, c, m) {
 function downloadCanvas(element) {
     var img = canvas.toDataURL("image/png");
     element.href = img;
+}
+
+function reset() {
+    IDa.value = 9301;
+    IDc.value = 233280;
+    IDm.value = 49297;
 }
