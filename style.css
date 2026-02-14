@@ -1,5 +1,5 @@
 :root {
-    background-color: rgb(24, 24, 25);
+    background-color: #181819;
 }
 
 * {
@@ -15,7 +15,7 @@ body {
     align-items: center;
     padding: 0;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -29,12 +29,15 @@ header > h2 {
 
 header > p {
     margin: 5px;
-    color: rgb(212, 212, 212);
+    color: #d4d4d4;
 }
 
 footer {
     width: 100%;
-    padding: 25px 0px;
+    line-height: 20px;
+    margin-top: auto;
+    padding: 20px 0;
+    background-color: #181819;
 }
 
 main {
@@ -49,11 +52,13 @@ main {
 
 #content {
     margin-left: 25px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 #display {
     list-style: none;
-    background-color: rgb(32, 32, 33);
+    background-color: #202021;
     margin: 0;
     padding: 10px;
 }
@@ -65,7 +70,7 @@ main {
 #sources {
     list-style: none;
     padding: 10px;
-    background-color: rgb(32, 32, 33);
+    background-color: #202021;
 }
 
 #sources h2 {
@@ -81,7 +86,7 @@ main {
     background: none;
     border: transparent;
     cursor: pointer;
-    background-color: rgb(24, 24, 25);
+    background-color: #181819;
     padding: 0;
     width: 80%;
 }
@@ -90,7 +95,7 @@ main {
     display: block;
     padding: 5px 10px;
     font-size: 15px;
-    background: rgb(28, 28, 29);
+    background: #1c1c1d;
     transform: translateY(-6px);
 }
 
@@ -106,9 +111,9 @@ main {
     font-size: 15px;
     padding: 5px 10px;
     text-align: left;
-    color: rgb(212, 212, 212);
-    border: 1px solid rgb(24, 24, 25);
-    background-color: rgb(36, 36, 37);
+    color: #d4d4d4;
+    border: 1px solid #181819;
+    background-color: #242425;
     border-top-left-radius: 0 !important;
 }
 
@@ -129,24 +134,24 @@ input[type=number]::-webkit-outer-spin-button {
 .input > label {
     position: absolute;
     top: -16px;
-    background-color: rgb(36, 36, 37);
+    background-color: #242425;
     padding: 0px 10px;
     border-radius: 0 !important;
-    border: 1px solid rgb(24, 24, 25);
+    border: 1px solid #181819;
 }
 
 .a-style {
     display: block;
     width: 80%;
     margin: 0 auto;
-    background-color: rgb(24, 24, 25);
+    background-color: #181819;
 }
 
 .a-style-front {
     display: block;
     padding: 5px 10px;
     font-size: 15px;
-    background: rgb(28, 28, 29);
+    background: #1c1c1d;
     transform: translateY(-6px);
 }
 
@@ -155,19 +160,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .download {
-    background-color: rgb(0, 100, 130) !important;
+    background-color: #006482 !important;
 }
 
 .download-front {
-    background-color: rgb(0, 125, 150) !important;
+    background-color: #007d96 !important;
 }
 
 .reset {
-    background-color: rgb(100, 30, 30) !important;
+    background-color: #641e1e !important;
 }
 
 .reset-front {
-    background-color: rgb(130, 30, 30) !important;
+    background-color: #821e1e !important;
 }
 
 @media screen and (max-width: 800px) and (min-width: 600px) {
@@ -198,16 +203,15 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     #canvas {
-        width: 300px;
-        height: 300px;
+        max-width: 300px;
+        max-height: 300px;
     }
 
     #content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        width: fit-content;
+        margin: 0;
         margin-top: 20px;
     }
 
